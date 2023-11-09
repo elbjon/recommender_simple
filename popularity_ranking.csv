@@ -1,0 +1,31 @@
+movieId,title,rank,mean,no,genres
+318,"Shawshank Redemption, The (1994)",22.52858832807571,4.429022082018927,1,Crime|Drama
+356,Forrest Gump (1994),21.656534954407295,4.164133738601824,2,Comedy|Drama|Romance|War
+296,Pulp Fiction (1994),21.44452361563518,4.197068403908795,3,Comedy|Crime|Drama|Thriller
+2571,"Matrix, The (1999)",20.972909172661872,4.192446043165468,4,Action|Sci-Fi|Thriller
+593,"Silence of the Lambs, The (1991)",20.86391129032258,4.161290322580645,5,Crime|Horror|Thriller
+260,Star Wars: Episode IV - A New Hope (1977),20.70555278884462,4.231075697211155,6,Action|Adventure|Sci-Fi
+2959,Fight Club (1999),20.357368119266056,4.272935779816514,7,Action|Crime|Drama|Thriller
+527,Schindler's List (1993),20.196875,4.225,8,Drama|War
+1196,Star Wars: Episode V - The Empire Strikes Back (1980),20.018809241706162,4.2156398104265405,9,Action|Adventure|Sci-Fi
+858,"Godfather, The (1972)",20.015625,4.2890625,10,Crime|Drama
+50,"Usual Suspects, The (1995)",19.99785539215686,4.237745098039215,11,Crime|Mystery|Thriller
+1198,Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981),19.814375,4.2075,12,Action|Adventure
+110,Braveheart (1995),19.689082278481013,4.031645569620253,13,Action|Drama|War
+1210,Star Wars: Episode VI - Return of the Jedi (1983),19.472895408163264,4.137755102040816,14,Action|Adventure|Sci-Fi
+2028,Saving Private Ryan (1998),19.381981382978722,4.1462765957446805,15,Action|Drama|War
+4993,"Lord of the Rings: The Fellowship of the Ring, The (2001)",19.377367424242426,4.106060606060606,16,Adventure|Fantasy
+2858,American Beauty (1999),19.272365196078432,4.056372549019608,17,Drama|Romance
+589,Terminator 2: Judgment Day (1991),19.24330357142857,3.970982142857143,18,Action|Sci-Fi
+7153,"Lord of the Rings: The Return of the King, The (2003)",19.225675675675674,4.118918918918919,19,Action|Adventure|Drama|Fantasy
+608,Fargo (1996),19.151588397790054,4.116022099447513,20,Comedy|Crime|Drama|Thriller
+58559,"Dark Knight, The (2008)",19.140520134228186,4.238255033557047,21,Action|Crime|Drama|IMAX
+1197,"Princess Bride, The (1987)",19.007702464788732,4.232394366197183,22,Action|Adventure|Comedy|Fantasy|Romance
+47,Seven (a.k.a. Se7en) (1995),18.932727832512313,3.9753694581280787,23,Mystery|Thriller
+1221,"Godfather: Part II, The (1974)",18.91375968992248,4.25968992248062,24,Crime|Drama
+1,Toy Story (1995),18.90247093023256,3.9209302325581397,25,Adventure|Animation|Children|Comedy|Fantasy
+5952,"Lord of the Rings: The Two Towers, The (2002)",18.881981382978722,4.0212765957446805,26,Adventure|Fantasy
+4226,Memento (2000),18.83431603773585,4.122641509433962,27,Mystery|Thriller
+1213,Goodfellas (1990),18.828125,4.25,28,Crime|Drama
+457,"Fugitive, The (1993)",18.796546052631577,3.9921052631578946,29,Thriller
+1193,One Flew Over the Cuckoo's Nest (1975),18.74953007518797,4.203007518796992,30,Drama
