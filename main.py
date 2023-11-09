@@ -6,4 +6,4 @@ import pandas as pd
 df = pd.read_csv('popularity_ranking.csv')
 
 
-st.write('hello') #df.head(20))
+st.write(df.head(20))
