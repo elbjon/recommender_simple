@@ -2,17 +2,16 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 
-
-image = Image.open('TopMenue.png')
-#displaying the image on streamlit app
-st.image(image, caption='Enter any caption here')
-
 st.set_page_config(
     page_title="World's Best Movie Recommendations",
     page_icon="📽️",
 )
 
-st.write("# Welcome to WBSflix! 📽️")
+image = Image.open('TopMenue.png')
+#displaying the image on streamlit app
+st.image(image) #, caption='Enter any caption here')
+
+st.write("# Welcome to WBSFLIX! 📽️")
 
 df = pd.read_csv('popularity_ranking.csv')
 
