@@ -13,6 +13,12 @@ option = st.selectbox(
     'Choose a movie!',
     df['title'].head(50))
 
+n = st.slider(
+    'How many recommandations would you like to receive?',
+    1, 25, 12)
 
 
-st.write('You selected:', option)
+
+
+
+st.write(f'You selected: {n} recommendations to {option}')
