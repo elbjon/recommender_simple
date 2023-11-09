@@ -33,8 +33,18 @@ n = st.slider(
 
 st.button("Give me recommendations", type="primary")
 if st.button('Say hello'):
-    st.write('Why hello there')
+    st.write(f'You selected: {n} recommendations to {option}')
 else:
     st.write('Goodbye')
 
-st.write(f'You selected: {n} recommendations to {option}')
+st.markdown('''
+    :blue[Disclaimer: This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.] ''')
+
+#st.write('Disclaimer: This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.')
+
+
+
+
+
+
+
