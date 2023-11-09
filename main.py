@@ -3,7 +3,7 @@ import pandas as pd
 
 
 
-#df = pd.read_csv('popularity_ranking.csv')
+df = pd.read_csv('popularity_ranking.csv')
 
 
 st.write('hello') #df.head(20))
