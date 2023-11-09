@@ -9,17 +9,12 @@ st.set_page_config(
 
 image = Image.open('TopMenue.png')
 #displaying the image on streamlit app
-st.image(image) #, caption='Enter any caption here')
+st.image(image, caption='')
 
 st.write("# Welcome to WBSFLIX! 📽️")
 
 df = pd.read_csv('popularity_ranking.csv')
 
-
-#opening the image
-#image = Image.open('Meme7-768x766.webp')
-#displaying the image on streamlit app
-#st.image(image, caption='Enter any caption here')
 
 
 
