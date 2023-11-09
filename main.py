@@ -1,7 +1,10 @@
 import streamlit as st
 import pandas as pd
 
-
+st.set_page_config(
+    page_title="World's Best Movie Recommendations",
+    page_icon="📽️",
+)
 
 df = pd.read_csv('popularity_ranking.csv')
 
@@ -31,11 +34,10 @@ n = st.slider(
 
 
 
-st.button("Give me recommendations", type="primary")
-if st.button('Say hello'):
+if st.button("Give me recommendations", type="primary"):
     st.write(f'You selected: {n} recommendations to {option}')
-else:
-    st.write('Goodbye')
+
+
 
 st.markdown('''
     :blue[Disclaimer: This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.] ''')
