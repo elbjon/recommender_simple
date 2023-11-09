@@ -1,18 +1,24 @@
 import streamlit as st
 import pandas as pd
+from PIL import Image
+image = Image.open('TopMenue.png')
+#displaying the image on streamlit app
+st.image(image, caption='Enter any caption here')
 
 st.set_page_config(
     page_title="World's Best Movie Recommendations",
     page_icon="📽️",
 )
+TopMenue.png
+st.write("# Welcome to WBSflix! 📽️")
 
 df = pd.read_csv('popularity_ranking.csv')
 
-from PIL import Image
+
 #opening the image
-image = Image.open('Meme7-768x766.webp')
+#image = Image.open('Meme7-768x766.webp')
 #displaying the image on streamlit app
-st.image(image, caption='Enter any caption here')
+#st.image(image, caption='Enter any caption here')
 
 
 
