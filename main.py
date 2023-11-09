@@ -7,21 +7,29 @@ st.set_page_config(
     page_icon="📽️",
 )
 
+#load fake top menue bar
 image = Image.open('TopMenue.png')
 #displaying the image on streamlit app
 st.image(image, caption='')
 
+# user welcome
 st.write("# Welcome to WBSFLIX! 📽️")
 
+
+
+# load files
 df = pd.read_csv('popularity_ranking.csv')
 
+url = 'https://drive.google.com/file/d/1x-YdD7anrrsnFaS5jUTfq9ELRXZ0iMQL/view?usp=sharing'
+path = 'https://drive.google.com/uc?id='+url.split('/')[-2]
+movies_cosines_matrix = pd.read_csv(path)
 
 
 
 
 
 st.write(df.head(20))
-
+st.write(movies_cosines_matrix.head(20))
 
 option = st.selectbox(
     'Choose a movie!',
