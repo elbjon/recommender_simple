@@ -82,10 +82,10 @@ if st.button("Give me recommendations", type="primary"):
 
     my_top_10 = (lovely_bones_cosines_df #item_correlations_df
               .head(n)
-              .reset_index())
-#              .merge(df.drop_duplicates(subset='movieId'),
-#                                         on='movieId',
-#                                         how='left'))
+              .reset_index()
+              .merge(df.drop_duplicates(subset='movieId'),
+                                         on='movieId',
+                                         how='left'))
     st.write(my_top_10[['title','mean','posters']])
 
 #st.write(df.loc[df['title'] == option,['posters']].iat[0, 0])
