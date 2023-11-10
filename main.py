@@ -41,7 +41,7 @@ option = st.selectbox(
 
 movieId = df.loc[df['title'] == option,['movieId']].iat[0, 0] #takes the first value
 #df.loc[df['title'] == option,['posters']].iat[0, 0]
-st.write(movieId)
+#st.write(movieId)
 
 abc = st.slider(
     'How many recommendations would you like to receive?',
