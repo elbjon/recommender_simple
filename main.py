@@ -18,7 +18,7 @@ st.write("# Welcome to WBSFLIX! 📽️")
 
 
 # load files
-df = pd.read_csv('popularity_ranking.csv')
+df = pd.read_csv('popularity_ranking_15.csv')
 df1 = pd.read_csv('mcm_15_1.csv', index_col='movieId')
 df2 = pd.read_csv('mcm_15_2.csv', index_col='movieId')
 user_movies_matrix = pd.read_csv('umm_15.csv', index_col='userId')
