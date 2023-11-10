@@ -99,6 +99,7 @@ st.write('https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NG
 
 
 
+
 #if st.button("Give me recommendations", type="primary"):
 #    st.write(f'You selected: {n} recommendations to {option}')
 #    st.write(myfunction(5, 2))
