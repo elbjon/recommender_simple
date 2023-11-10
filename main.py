@@ -21,16 +21,19 @@ st.write("# Welcome to WBSFLIX! 📽️")
 df = pd.read_csv('popularity_ranking.csv')
 df1 = pd.read_csv('mcm_15_1.csv', index_col='movieId')
 df2 = pd.read_csv('mcm_15_2.csv', index_col='movieId')
-df3 = pd.read_csv('umm_15.csv')
+df3 = pd.read_csv('umm_15.csv', index_col='userId')
 #url = 'https://drive.google.com/file/d/1x-YdD7anrrsnFaS5jUTfq9ELRXZ0iMQL/view?usp=sharing'
 #path = 'https://drive.google.com/uc?id='+url.split('/')[-2]
-movies_cosines_matrix = pd.read_csv("https://drive.google.com/u/0/uc?id=1x-YdD7anrrsnFaS5jUTfq9ELRXZ0iMQL&amp;export=download&amp;confirm=t&amp;uuid=729f37c9-a7e8-4081-8042-685d94d1b852&amp;at=AB6BwCAMtTPXBhdWE1nSBFCXloZN:1699575124612")
+df666 = pd.read_csv("https://drive.google.com/u/0/uc?id=1x-YdD7anrrsnFaS5jUTfq9ELRXZ0iMQL&amp;export=download&amp;confirm=t&amp;uuid=729f37c9-a7e8-4081-8042-685d94d1b852&amp;at=AB6BwCAMtTPXBhdWE1nSBFCXloZN:1699575124612")
 
-st.write(df1.head())
-st.write(df2.head())
+#st.write(df1.head())
+#st.write(df2.head())
 st.write(df3.head())
 
+df_concatenated = pd.concat([df1, df2], ignore_index=True)
+st.write(df_concatenated.head())
 
+#Start of App
 st.write(df.head(20))
 st.write(movies_cosines_matrix.head(20))
 
