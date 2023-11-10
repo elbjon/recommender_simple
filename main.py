@@ -44,8 +44,8 @@ abc = st.slider(
     1, 15, 6)
 
 
-movieId = 1
-n=5 #abc
+movieId = 6
+n = abc
 
 #def myfunction(movieId, n):
 if st.button("Give me recommendations", type="primary"):
@@ -83,7 +83,7 @@ if st.button("Give me recommendations", type="primary"):
               .merge(df.drop_duplicates(subset='movieId'),
                                          on='movieId',
                                          how='left'))
-    st.write(lovely_bones_cosines_df.head())  #my_top_10
+    st.write(lovely_bones_cosines_df.head(n))  #my_top_10
         
 
 
