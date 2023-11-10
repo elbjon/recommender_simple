@@ -86,12 +86,12 @@ if st.button("Give me recommendations", type="primary"):
               .merge(df.drop_duplicates(subset='movieId'),
                                          on='movieId',
                                          how='left'))
-    st.write(my_top_10[['title','mean']])
+    st.write(my_top_10[['title','mean','posters']])
 
 st.write('https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg')
-image2 = Image.open('https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg')
+#image2 = Image.open('https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg')
 #displaying the image on streamlit app
-st.image(image2, caption='')
+#st.image(image2, caption='')
 
 
 
