@@ -19,8 +19,8 @@ st.write("# Welcome to WBSFLIX! 📽️")
 
 # load files
 df = pd.read_csv('popularity_ranking.csv')
-df1 = pd.read_csv('mcm_15_1.csv', index_col='userId')
-df2 = pd.read_csv('mcm_15_2.csv', index_col='userId')
+df1 = pd.read_csv('mcm_15_1.csv', index_col='movieId')
+df2 = pd.read_csv('mcm_15_2.csv', index_col='movieId')
 df3 = pd.read_csv('umm_15.csv')
 #url = 'https://drive.google.com/file/d/1x-YdD7anrrsnFaS5jUTfq9ELRXZ0iMQL/view?usp=sharing'
 #path = 'https://drive.google.com/uc?id='+url.split('/')[-2]
