@@ -35,9 +35,9 @@ movies_cosines_matrix = pd.concat([df1, df2], ignore_index=False)
 #st.write(df.head(20))
 
 
-#option = st.selectbox(
-#    'Choose a movie!',
-#    df['title'].head(50))
+option = st.selectbox(
+    'Choose a movie!',
+    df['title'].head(50))
 
 abc = st.slider(
     'How many recommendations would you like to receive?',
