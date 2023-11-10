@@ -40,6 +40,7 @@ option = st.selectbox(
     df['title'].head(50))
 
 movieId = df.loc[df['title'] == option,['movieId']].iat[0, 0] #takes the first value
+df.loc[df['title'] == option,['posters']].iat[0, 0]
 st.write(movieId)
 
 abc = st.slider(
@@ -88,7 +89,7 @@ if st.button("Give me recommendations", type="primary"):
                                          how='left'))
     st.write(my_top_10[['title','mean','posters']])
 
-st.write('https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg')
+st.write(df.loc[df['title'] == option,['posters']].iat[0, 0])
 #image2 = Image.open('https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg')
 #displaying the image on streamlit app
 #st.image(image2, caption='')
