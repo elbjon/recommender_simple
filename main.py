@@ -39,6 +39,9 @@ option = st.selectbox(
     'Choose a movie!',
     df['title'].head(50))
 
+a = df.loc['title'] == option,['movieId']
+st.write(a, type(a))
+
 abc = st.slider(
     'How many recommendations would you like to receive?',
     1, 15, 6)
