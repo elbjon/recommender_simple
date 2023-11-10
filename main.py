@@ -83,7 +83,7 @@ if st.button("Give me recommendations", type="primary"):
               .merge(df.drop_duplicates(subset='movieId'),
                                          on='movieId',
                                          how='left'))
-    st.write(my_top_10)
+    st.write(my_top_10[['title','mean']])
         
 
 
