@@ -30,12 +30,12 @@ df666 = pd.read_csv("https://drive.google.com/u/0/uc?id=1x-YdD7anrrsnFaS5jUTfq9E
 #st.write(df2.head())
 st.write(df3.head())
 
-df_concatenated = pd.concat([df1, df2], ignore_index=True)
-st.write(df_concatenated.head())
+movies_cosines_matrix = pd.concat([df1, df2], ignore_index=False)
+st.write(movies_cosines_matrix.head())
 
 #Start of App
 st.write(df.head(20))
-st.write(movies_cosines_matrix.head(20))
+st.write(df666.head(20))
 
 option = st.selectbox(
     'Choose a movie!',
