@@ -84,13 +84,6 @@ n=2
 
 
 
-option = st.selectbox(
-    'Choose a movie!',
-    df['title'].head(50))
-
-n = st.slider(
-    'How many recommendations would you like to receive?',
-    1, 15, 6)
 
 
 
