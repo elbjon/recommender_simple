@@ -78,16 +78,17 @@ option = st.selectbox(
     df['title'].head(50))
 
 n = st.slider(
-    'How many recommandations would you like to receive?',
+    'How many recommendations would you like to receive?',
     1, 15, 6)
 
-
+st.write(myfunction(5, n))
 
 
 
 
 if st.button("Give me recommendations", type="primary"):
     st.write(f'You selected: {n} recommendations to {option}')
+    st.write(myfunction(5, n))
 
 
 
