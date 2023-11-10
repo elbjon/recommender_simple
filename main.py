@@ -45,14 +45,15 @@ abc = st.slider(
 
 
 movieId = 1
-n=abc
+n=5 #abc
 
 #def myfunction(movieId, n):
 if st.button("Give me recommendations", type="primary"):
     lovely_bones_isbn = movieId
-
+    #st.write(lovely_bones_isbn, n)
+    #st.write(movies_cosines_matrix)
 #    # Create a DataFrame using the values from 'books_cosines_matrix' for the 'lovely_bones_isbn' book.
-    lovely_bones_cosines_df = pd.DataFrame(movies_cosines_matrix[lovely_bones_isbn])
+    lovely_bones_cosines_df = pd.DataFrame(movies_cosines_matrix.loc[:,str(n)])
     st.write(lovely_bones_isbn, n,lovely_bones_cosines_df)
 #
 #    # Rename the column 'lovely_bones_isbn' to 'lovely_bones_cosine'
