@@ -24,25 +24,22 @@ df2 = pd.read_csv('mcm_15_2.csv', index_col='movieId')
 user_movies_matrix = pd.read_csv('umm_15.csv', index_col='userId')
 #url = 'https://drive.google.com/file/d/1x-YdD7anrrsnFaS5jUTfq9ELRXZ0iMQL/view?usp=sharing'
 #path = 'https://drive.google.com/uc?id='+url.split('/')[-2]
-df666 = pd.read_csv("https://drive.google.com/u/0/uc?id=1x-YdD7anrrsnFaS5jUTfq9ELRXZ0iMQL&amp;export=download&amp;confirm=t&amp;uuid=729f37c9-a7e8-4081-8042-685d94d1b852&amp;at=AB6BwCAMtTPXBhdWE1nSBFCXloZN:1699575124612")
+#df666 = pd.read_csv("https://drive.google.com/u/0/uc?id=1x-YdD7anrrsnFaS5jUTfq9ELRXZ0iMQL&amp;export=download&amp;confirm=t&amp;uuid=729f37c9-a7e8-4081-8042-685d94d1b852&amp;at=AB6BwCAMtTPXBhdWE1nSBFCXloZN:1699575124612")
 
-#st.write(df1.head())
-#st.write(df2.head())
-st.write(user_movies_matrix.head())
+#st.write(user_movies_matrix.head())
 
 movies_cosines_matrix = pd.concat([df1, df2], ignore_index=False)
-st.write(movies_cosines_matrix.head(-1), movies_cosines_matrix.head(-5))
+#st.write(movies_cosines_matrix.head(-1), movies_cosines_matrix.head(-5))
 
-#Start of App
-st.write(df.head(20))
-st.write(df666.head(20))
+## Start of App
+#st.write(df.head(20))
 
 
 option = st.selectbox(
     'Choose a movie!',
     df['title'].head(50))
 
-n = st.slider(
+abc = st.slider(
     'How many recommendations would you like to receive?',
     1, 15, 6)
 
@@ -51,28 +48,28 @@ movieId = 1
 n=2
 
 #def myfunction(movieId, n):
-if st.button("Give me recommendations", type="primary"):
-    lovely_bones_isbn = movieId
-    # Create a DataFrame using the values from 'books_cosines_matrix' for the 'lovely_bones_isbn' book.
-    lovely_bones_cosines_df = pd.DataFrame(movies_cosines_matrix[lovely_bones_isbn])
+#if st.button("Give me recommendations", type="primary"):
+#    lovely_bones_isbn = movieId
+#    # Create a DataFrame using the values from 'books_cosines_matrix' for the 'lovely_bones_isbn' book.
+#    lovely_bones_cosines_df = pd.DataFrame(movies_cosines_matrix[lovely_bones_isbn])
+#
+#    # Rename the column 'lovely_bones_isbn' to 'lovely_bones_cosine'
+#    lovely_bones_cosines_df = lovely_bones_cosines_df.rename(columns={lovely_bones_isbn: 'lovely_bones_cosine'})
+#
+#   # Remove the row with the index 'lovely_bones_isbn'
+#    lovely_bones_cosines_df = lovely_bones_cosines_df[lovely_bones_cosines_df.index != lovely_bones_isbn]
+#
+#    # Sort the 'lovely_bones_cosines_df' by the column 'lovely_bones_cosine' column in descending order.
+#    lovely_bones_cosines_df = lovely_bones_cosines_df.sort_values(by="lovely_bones_cosine", ascending=False)
 
-    # Rename the column 'lovely_bones_isbn' to 'lovely_bones_cosine'
-    lovely_bones_cosines_df = lovely_bones_cosines_df.rename(columns={lovely_bones_isbn: 'lovely_bones_cosine'})
-
-    # Remove the row with the index 'lovely_bones_isbn'
-    lovely_bones_cosines_df = lovely_bones_cosines_df[lovely_bones_cosines_df.index != lovely_bones_isbn]
-
-    # Sort the 'lovely_bones_cosines_df' by the column 'lovely_bones_cosine' column in descending order.
-    lovely_bones_cosines_df = lovely_bones_cosines_df.sort_values(by="lovely_bones_cosine", ascending=False)
-
-    # Find out the number of users rated both The Lovely Bones and the other book
-    no_of_users_rated_both_books = [sum((user_movies_matrix[lovely_bones_isbn] > 0) & (user_movies_matrix[isbn] > 0)) for isbn in lovely_bones_cosines_df.index]
-
-    # Create a column for the number of users who rated The Lovely Bones and the other book
-    lovely_bones_cosines_df['users_who_rated_both_books'] = no_of_users_rated_both_books
-
-    # Remove recommendations that have less than 10 users who rated both books.
-    lovely_bones_cosines_df = lovely_bones_cosines_df[lovely_bones_cosines_df["users_who_rated_both_books"] > 5]
+#    # Find out the number of users rated both The Lovely Bones and the other book
+#    no_of_users_rated_both_books = [sum((user_movies_matrix[lovely_bones_isbn] > 0) & (user_movies_matrix[isbn] > 0)) for isbn in lovely_bones_cosines_df.index]
+#
+#    # Create a column for the number of users who rated The Lovely Bones and the other book
+#    lovely_bones_cosines_df['users_who_rated_both_books'] = no_of_users_rated_both_books
+#
+#    # Remove recommendations that have less than 10 users who rated both books.
+#    lovely_bones_cosines_df = lovely_bones_cosines_df[lovely_bones_cosines_df["users_who_rated_both_books"] > 5]
 
     
 
@@ -82,7 +79,7 @@ if st.button("Give me recommendations", type="primary"):
     #          .merge(df_movies.drop_duplicates(subset='movieId'),
     #                                     on='movieId',
     #                                     how='left'))
-    st.write(lovely_bones_cosines_df.head()) #my_top_10
+#    st.write(lovely_bones_cosines_df.head()) #my_top_10
         
 
 
@@ -95,8 +92,6 @@ n = st.slider(
     'How many recommendations would you like to receive?',
     1, 15, 6)
 
-#abc = myfunction(5, 2)
-#st.write(abc)
 
 
 
