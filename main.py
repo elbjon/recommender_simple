@@ -20,9 +20,9 @@ st.write("# Welcome to WBSFLIX! 📽️")
 # load files
 df = pd.read_csv('popularity_ranking.csv')
 
-url = 'https://drive.google.com/file/d/1x-YdD7anrrsnFaS5jUTfq9ELRXZ0iMQL/view?usp=sharing'
-path = 'https://drive.google.com/uc?id='+url.split('/')[-2]
-movies_cosines_matrix = pd.read_csv(path)
+#url = 'https://drive.google.com/file/d/1x-YdD7anrrsnFaS5jUTfq9ELRXZ0iMQL/view?usp=sharing'
+#path = 'https://drive.google.com/uc?id='+url.split('/')[-2]
+movies_cosines_matrix = pd.read_csv("https://drive.google.com/u/0/uc?id=1x-YdD7anrrsnFaS5jUTfq9ELRXZ0iMQL&amp;export=download&amp;confirm=t&amp;uuid=729f37c9-a7e8-4081-8042-685d94d1b852&amp;at=AB6BwCAMtTPXBhdWE1nSBFCXloZN:1699575124612")
 
 
 
