@@ -39,7 +39,7 @@ option = st.selectbox(
     'Choose a movie!',
     df['title'].head(50))
 
-a = df.loc[df['title'] == option,['movieId']]
+movieId = df.loc[df['title'] == option,['movieId']]
 st.write(a, type(a))
 
 abc = st.slider(
@@ -47,7 +47,7 @@ abc = st.slider(
     1, 15, 6)
 
 
-movieId = 6
+st.write(movieId)
 n = abc
 
 #def myfunction(movieId, n):
