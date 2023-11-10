@@ -69,7 +69,7 @@ if st.button("Give me recommendations", type="primary"):
     no_of_users_rated_both_books = [sum((user_movies_matrix[lovely_bones_isbn] > 0) & (user_movies_matrix[isbn] > 0)) for isbn in lovely_bones_cosines_df.index]
     st.write(no_of_users_rated_both_books)
 #    # Create a column for the number of users who rated The Lovely Bones and the other book
-#    lovely_bones_cosines_df['users_who_rated_both_books'] = no_of_users_rated_both_books
+    lovely_bones_cosines_df['users_who_rated_both_books'] = no_of_users_rated_both_books
 #
 #    # Remove recommendations that have less than 10 users who rated both books.
 #    lovely_bones_cosines_df = lovely_bones_cosines_df[lovely_bones_cosines_df["users_who_rated_both_books"] > 5]
