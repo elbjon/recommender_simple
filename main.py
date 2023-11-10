@@ -86,9 +86,9 @@ st.write(myfunction(5, n))
 
 
 
-if st.button("Give me recommendations", type="primary"):
-    st.write(f'You selected: {n} recommendations to {option}')
-    st.write(myfunction(5, 2))
+#if st.button("Give me recommendations", type="primary"):
+#    st.write(f'You selected: {n} recommendations to {option}')
+#    st.write(myfunction(5, 2))
 
 
 
