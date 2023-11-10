@@ -100,7 +100,7 @@ st.write(df.loc[df['title'] == option,['posters']].iat[0, 0])
 
 import requests
 #from io import BytesIO
-response = requests.get(url)
+response = requests.get(url, stream=True)
 #img = Image.open(BytesIO(response.content))
 img = Image.open(response.raw)
 st.image(img)
