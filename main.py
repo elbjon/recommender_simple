@@ -28,6 +28,7 @@ movies_cosines_matrix = pd.read_csv("https://drive.google.com/u/0/uc?id=1x-YdD7a
 
 
 
+
 st.write(df.head(20))
 st.write(movies_cosines_matrix.head(20))
 
