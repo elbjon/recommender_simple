@@ -49,7 +49,7 @@ n=5 #abc
 
 #def myfunction(movieId, n):
 if st.button("Give me recommendations", type="primary"):
-    lovely_bones_isbn = movieId
+    lovely_bones_isbn = str(int(movieId))
     #st.write(lovely_bones_isbn, n)
     #st.write(movies_cosines_matrix)
 #    # Create a DataFrame using the values from 'books_cosines_matrix' for the 'lovely_bones_isbn' book.
