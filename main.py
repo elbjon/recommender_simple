@@ -102,6 +102,7 @@ import requests
 from io import BytesIO
 response = requests.get('https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg')
 img = Image.open(BytesIO(response.content))
+st.write(img)
 
 
 
