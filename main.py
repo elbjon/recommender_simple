@@ -81,7 +81,7 @@ n = st.slider(
     'How many recommendations would you like to receive?',
     1, 15, 6)
 
-st.write(myfunction(5, n))
+st.write(myfunction(5, 2))
 
 
 
