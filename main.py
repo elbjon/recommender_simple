@@ -40,7 +40,7 @@ option = st.selectbox(
     df['title'].head(50))
 
 movieId = df.loc[df['title'] == option,['movieId']].iat[0, 0] #takes the first value
-#df.loc[df['title'] == option,['posters']].iat[0, 0]
+url = df.loc[df['title'] == option,['posters']].iat[0, 0]
 #st.write(movieId)
 
 abc = st.slider(
@@ -100,7 +100,7 @@ st.write(df.loc[df['title'] == option,['posters']].iat[0, 0])
 
 import requests
 from io import BytesIO
-response = requests.get('https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg')
+response = requests.get(url)
 img = Image.open(BytesIO(response.content))
 st.image(img)
 
