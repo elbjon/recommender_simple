@@ -50,9 +50,10 @@ n=abc
 #def myfunction(movieId, n):
 if st.button("Give me recommendations", type="primary"):
     lovely_bones_isbn = movieId
-    st.write(lovely_bones_isbn)
+
 #    # Create a DataFrame using the values from 'books_cosines_matrix' for the 'lovely_bones_isbn' book.
-#    lovely_bones_cosines_df = pd.DataFrame(movies_cosines_matrix[lovely_bones_isbn])
+    lovely_bones_cosines_df = pd.DataFrame(movies_cosines_matrix[lovely_bones_isbn])
+    st.write(lovely_bones_isbn, n,lovely_bones_cosines_df)
 #
 #    # Rename the column 'lovely_bones_isbn' to 'lovely_bones_cosine'
 #    lovely_bones_cosines_df = lovely_bones_cosines_df.rename(columns={lovely_bones_isbn: 'lovely_bones_cosine'})
