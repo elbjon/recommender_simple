@@ -37,6 +37,8 @@ st.write(movies_cosines_matrix.head(-1), movies_cosines_matrix.head(-5))
 st.write(df.head(20))
 st.write(df666.head(20))
 
+movieId = 1
+n=2
 def myfunction(movieId, n):
     lovely_bones_isbn = movieId
     # Create a DataFrame using the values from 'books_cosines_matrix' for the 'lovely_bones_isbn' book.
@@ -62,13 +64,13 @@ def myfunction(movieId, n):
 
     
 
-    my_top_10 = (lovely_bones_cosines_df #item_correlations_df
-              .head(n)
-              .reset_index()
-              .merge(df_movies.drop_duplicates(subset='movieId'),
-                                         on='movieId',
-                                         how='left'))
-    return my_top_10
+    #my_top_10 = (lovely_bones_cosines_df #item_correlations_df
+    #          .head(n)
+    #          .reset_index()
+    #          .merge(df_movies.drop_duplicates(subset='movieId'),
+    #                                     on='movieId',
+    #                                     how='left'))
+    return lovely_bones_cosines_df.head() #my_top_10
         
 
 
@@ -81,7 +83,8 @@ n = st.slider(
     'How many recommendations would you like to receive?',
     1, 15, 6)
 
-st.write(myfunction(5, 2))
+abc = myfunction(5, 2)
+st.write(abc)
 
 
 
