@@ -37,9 +37,21 @@ st.write(movies_cosines_matrix.head(-1), movies_cosines_matrix.head(-5))
 st.write(df.head(20))
 st.write(df666.head(20))
 
+
+option = st.selectbox(
+    'Choose a movie!',
+    df['title'].head(50))
+
+n = st.slider(
+    'How many recommendations would you like to receive?',
+    1, 15, 6)
+
+
 movieId = 1
 n=2
-def myfunction(movieId, n):
+
+#def myfunction(movieId, n):
+if st.button("Give me recommendations", type="primary"):
     lovely_bones_isbn = movieId
     # Create a DataFrame using the values from 'books_cosines_matrix' for the 'lovely_bones_isbn' book.
     lovely_bones_cosines_df = pd.DataFrame(movies_cosines_matrix[lovely_bones_isbn])
@@ -70,7 +82,7 @@ def myfunction(movieId, n):
     #          .merge(df_movies.drop_duplicates(subset='movieId'),
     #                                     on='movieId',
     #                                     how='left'))
-    return lovely_bones_cosines_df.head() #my_top_10
+    st.write(lovely_bones_cosines_df.head()) #my_top_10
         
 
 
@@ -83,8 +95,8 @@ n = st.slider(
     'How many recommendations would you like to receive?',
     1, 15, 6)
 
-abc = myfunction(5, 2)
-st.write(abc)
+#abc = myfunction(5, 2)
+#st.write(abc)
 
 
 
