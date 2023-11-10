@@ -45,7 +45,7 @@ abc = st.slider(
 
 
 movieId = 1
-n=2
+n=abc
 
 #def myfunction(movieId, n):
 if st.button("Give me recommendations", type="primary"):
