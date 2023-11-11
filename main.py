@@ -86,7 +86,7 @@ if st.button("Give me recommendations", type="primary"):
     lovely_bones_cosines_df['users_who_rated_both_books_old'] = no_of_users_rated_both_books_old
     st.write(87)
 #    # Remove recommendations that have less than 5 users who rated both books.
-    lovely_bones_cosines_df = lovely_bones_cosines_df[lovely_bones_cosines_df["users_who_rated_both_books"] > 5]
+    lovely_bones_cosines_df = lovely_bones_cosines_df[lovely_bones_cosines_df["users_who_rated_both_books_old"] > 5]
     st.write(90)
     
 
@@ -96,7 +96,7 @@ if st.button("Give me recommendations", type="primary"):
                                          on='movieId',
                                          how='left')
                 )
-    #my_top_10 = my_top_10.head(n)#.sort_values(by='', ascending=False).head(n)
+    my_top_10 = my_top_10.head(n)  #.sort_values(by='', ascending=False).head(n)
 
     st.write(my_top_10[['title','mean','posters']])
     st.write(my_top_10.head(1))
