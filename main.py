@@ -74,20 +74,16 @@ if st.button("Give me recommendations", type="primary"):
     lovely_bones_cosines_df = lovely_bones_cosines_df.sort_values(by='lovely_bones_cosine', ascending=False)
     item_cosines_df = item_cosines_df.sort_values(by="item_cosine", ascending=False)
 
-    st.write('old', lovely_bones_cosines_df.index)
-    st.write('new', item_cosines_df.index)
-    st.write(user_movies_matrix.head())
-
     # Find out the number of users rated both The Lovely Bones and the other book
     no_of_users_rated_both_books_old = [sum((user_movies_matrix[str(int(lovely_bones_isbn))] > 0) & (user_movies_matrix[str(int(isbn))] > 0)) for isbn in lovely_bones_cosines_df.index]
     #no_of_users_rated_both_books = [sum((user_movies_matrix[movieId] > 0) & (user_movies_matrix[i] > 0)) for i in item_cosines_df.index]
-    st.write(84)
+
     # Create a column for the number of users who rated The Lovely Bones and the other book
     lovely_bones_cosines_df['users_who_rated_both_books_old'] = no_of_users_rated_both_books_old
-    st.write(87)
+
 #    # Remove recommendations that have less than 5 users who rated both books.
     lovely_bones_cosines_df = lovely_bones_cosines_df[lovely_bones_cosines_df["users_who_rated_both_books_old"] > 5]
-    st.write(90)
+
     
 
     my_top_10 = (lovely_bones_cosines_df #item_correlations_df
