@@ -57,6 +57,7 @@ n = abc
 if st.button("Give me recommendations", type="primary"):
     lovely_bones_isbn = str(int(movieId)) #dont ask why.
     movieId = str(int(movieId))
+    
     # Create a DataFrame using the values from 'books_cosines_matrix' for the 'lovely_bones_isbn' book.
     lovely_bones_cosines_df = pd.DataFrame(movies_cosines_matrix.loc[:,movieId])
     item_cosines_df = pd.DataFrame(movies_cosines_matrix.loc[:,movieId])
@@ -67,8 +68,10 @@ if st.button("Give me recommendations", type="primary"):
     
     # Remove the row with the index 'lovely_bones_isbn'
     lovely_bones_cosines_df = lovely_bones_cosines_df[lovely_bones_cosines_df.index != lovely_bones_isbn]
-    st.write('70: ', lovely_bones_cosines_df.head(10))
+    item_cosines_df = item_cosines_df[item_cosines_df.index != movieId]
     
+    st.write('70: ', lovely_bones_cosines_df.head(10))
+    st.write(item_cosines_df.head(10))
     
     
     # Sort the 'lovely_bones_cosines_df' by the column 'lovely_bones_cosine' column in descending order.
