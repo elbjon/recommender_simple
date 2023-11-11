@@ -66,7 +66,7 @@ if st.button("Give me recommendations", type="primary"):
 
     # Remove the row with the index 'lovely_bones_isbn'
     lovely_bones_cosines_df = lovely_bones_cosines_df[lovely_bones_cosines_df.index != lovely_bones_isbn]
-
+    st.write(lovely_bones_cosines_df.sample(30))
     # Sort the 'lovely_bones_cosines_df' by the column 'lovely_bones_cosine' column in descending order.
     lovely_bones_cosines_df = lovely_bones_cosines_df.sort_values(by=str(int(n)), ascending=False)
 
@@ -82,34 +82,29 @@ if st.button("Give me recommendations", type="primary"):
     
 
     my_top_10 = (lovely_bones_cosines_df #item_correlations_df
-              .head(n)
               .reset_index()
               .merge(df.drop_duplicates(subset='movieId'),
                                          on='movieId',
-                                         how='left'))
+                                         how='left')
+                )
+    my_top_10 = my_top_10.sort_values(by='', ascending=False).head(n)
+
     st.write(my_top_10[['title','mean','posters']])
-
-#st.write(df.loc[df['title'] == option,['posters']].iat[0, 0])
-
+    st.write(my_top_10.head(1))
 
 
+# show movie poster of chosen movie
 response = requests.get(url, stream=True)
 img = Image.open(response.raw)
 st.image(img)
 
 
-
-
-
-#if st.button("Give me recommendations", type="primary"):
-#    st.write(f'You selected: {n} recommendations to {option}')
-#    st.write(myfunction(5, 2))
-
+st.write('<br><br><br>\n\n\n\n<br><br><br><br>')
 
 st.markdown('''
     :blue[Disclaimer: This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.] ''')
 
-#st.write('Disclaimer: This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.')
+
 
 
 
