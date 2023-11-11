@@ -101,8 +101,8 @@ st.image(img)
 
 st.write('<br><br><br>\n\n\n\n<br><br><br><br>')
 
-st.markdown('''
-    :blue[Disclaimer: This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.] ''')
+#st.markdown('''
+#    :blue[Disclaimer: This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.] ''')
 
 
 
