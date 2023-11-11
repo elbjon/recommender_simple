@@ -58,7 +58,8 @@ if st.button("Give me recommendations", type="primary"):
     lovely_bones_isbn = str(int(movieId))
 
     # Create a DataFrame using the values from 'books_cosines_matrix' for the 'lovely_bones_isbn' book.
-    lovely_bones_cosines_df = pd.DataFrame(movies_cosines_matrix.loc[:,str(n)])
+    lovely_bones_cosines_df = pd.DataFrame(movies_cosines_matrix.loc[:,str(movieId)])
+    item_cosines_df = pd.DataFrame(movies_cosines_matrix[movieId])
     st.write(lovely_bones_cosines_df.head(10))    
 
     # Rename the column 'lovely_bones_isbn' to 'lovely_bones_cosine'
@@ -68,7 +69,7 @@ if st.button("Give me recommendations", type="primary"):
     lovely_bones_cosines_df = lovely_bones_cosines_df[lovely_bones_cosines_df.index != lovely_bones_isbn]
     st.write(lovely_bones_cosines_df.head(10))
     # Sort the 'lovely_bones_cosines_df' by the column 'lovely_bones_cosine' column in descending order.
-    lovely_bones_cosines_df = lovely_bones_cosines_df.sort_values(by=str(int(n)), ascending=False)
+    lovely_bones_cosines_df = lovely_bones_cosines_df.sort_values(by='movieId'), ascending=False)
 
     # Find out the number of users rated both The Lovely Bones and the other book
     no_of_users_rated_both_books = [sum((user_movies_matrix[str(int(lovely_bones_isbn))] > 0) & (user_movies_matrix[str(int(isbn))] > 0)) for isbn in lovely_bones_cosines_df.index]
