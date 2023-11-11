@@ -95,7 +95,7 @@ if st.button("Give me recommendations", type="primary"):
     my_top_10 = my_top_10.sort_values(by='lovely_bones_cosine', ascending=False).head(n)
 
     st.write(my_top_10[['title','mean','posters']])
-    st.write(my_top_10.head(1))
+    #st.write(my_top_10.head(1))
 
 
 # show movie poster of chosen movie
