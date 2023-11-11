@@ -67,12 +67,12 @@ if st.button("Give me recommendations", type="primary"):
     
     # Remove the row with the index 'lovely_bones_isbn'
     lovely_bones_cosines_df = lovely_bones_cosines_df[lovely_bones_cosines_df.index != lovely_bones_isbn]
-    st.write('l73: ', lovely_bones_cosines_df.head(10))
+    st.write('70: ', lovely_bones_cosines_df.head(10))
     
     
     
     # Sort the 'lovely_bones_cosines_df' by the column 'lovely_bones_cosine' column in descending order.
-    lovely_bones_cosines_df = lovely_bones_cosines_df.sort_values(by=movieId, ascending=False)
+    lovely_bones_cosines_df = lovely_bones_cosines_df.sort_values(by='lovely_bones_cosine', ascending=False)
 
     # Find out the number of users rated both The Lovely Bones and the other book
     no_of_users_rated_both_books = [sum((user_movies_matrix[str(int(lovely_bones_isbn))] > 0) & (user_movies_matrix[str(int(isbn))] > 0)) for isbn in lovely_bones_cosines_df.index]
