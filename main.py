@@ -17,18 +17,19 @@ st.image(image, caption='')
 st.write("# Welcome to WBSFLIX! 📽️")
 
 
-
 # load files
 df = pd.read_csv('popularity_ranking_15.csv')
 df1 = pd.read_csv('mcm_15_1.csv', index_col='movieId')
 df2 = pd.read_csv('mcm_15_2.csv', index_col='movieId')
+
+movies_cosines_matrix = pd.concat([df1, df2], ignore_index=False)
 user_movies_matrix = pd.read_csv('umm_15.csv', index_col='userId')
 
 
 
 
 
-movies_cosines_matrix = pd.concat([df1, df2], ignore_index=False)
+
 
 
 ## Start of App
@@ -75,7 +76,7 @@ if st.button("Give me recommendations", type="primary"):
     # Create a column for the number of users who rated The Lovely Bones and the other book
     lovely_bones_cosines_df['users_who_rated_both_books'] = no_of_users_rated_both_books
 
-#    # Remove recommendations that have less than 10 users who rated both books.
+#    # Remove recommendations that have less than 5 users who rated both books.
     lovely_bones_cosines_df = lovely_bones_cosines_df[lovely_bones_cosines_df["users_who_rated_both_books"] > 5]
 
     
