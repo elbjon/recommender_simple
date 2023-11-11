@@ -56,17 +56,14 @@ n = abc
 # Button that contains the functionality to give out item based recommendations
 if st.button("Give me recommendations", type="primary"):
     lovely_bones_isbn = str(int(movieId)) #dont ask why.
-
+    movieId = str(int(movieId))
     # Create a DataFrame using the values from 'books_cosines_matrix' for the 'lovely_bones_isbn' book.
-    lovely_bones_cosines_df = pd.DataFrame(movies_cosines_matrix.loc[:,str(movieId)])
-    item_cosines_df = pd.DataFrame(movies_cosines_matrix.loc[:,str(movieId)])
-    st.write('lovely_bones_cosines_df: ', lovely_bones_cosines_df.head(10))  
-    st.write('item_cosines_df: ', item_cosines_df.head(10))  
+    lovely_bones_cosines_df = pd.DataFrame(movies_cosines_matrix.loc[:,movieId])
+    item_cosines_df = pd.DataFrame(movies_cosines_matrix.loc[:,movieId])
 
     # Rename the column 'lovely_bones_isbn' to 'lovely_bones_cosine'
     lovely_bones_cosines_df = lovely_bones_cosines_df.rename(columns={lovely_bones_isbn: 'lovely_bones_cosine'})
-    st.write('lovely_bones_cosines_df: ', lovely_bones_cosines_df.head(10))  
-
+    item_cosines_df = item_cosines_df.rename(columns={movieId: 'item_cosine'})
     
     # Remove the row with the index 'lovely_bones_isbn'
     lovely_bones_cosines_df = lovely_bones_cosines_df[lovely_bones_cosines_df.index != lovely_bones_isbn]
