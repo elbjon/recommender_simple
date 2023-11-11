@@ -59,14 +59,14 @@ if st.button("Give me recommendations", type="primary"):
 
     # Create a DataFrame using the values from 'books_cosines_matrix' for the 'lovely_bones_isbn' book.
     lovely_bones_cosines_df = pd.DataFrame(movies_cosines_matrix.loc[:,str(n)])
-    
+    st.write(lovely_bones_cosines_df.head(10))    
 
     # Rename the column 'lovely_bones_isbn' to 'lovely_bones_cosine'
     lovely_bones_cosines_df = lovely_bones_cosines_df.rename(columns={lovely_bones_isbn: 'lovely_bones_cosine'})
 
     # Remove the row with the index 'lovely_bones_isbn'
     lovely_bones_cosines_df = lovely_bones_cosines_df[lovely_bones_cosines_df.index != lovely_bones_isbn]
-    st.write(lovely_bones_cosines_df.sample(30))
+    st.write(lovely_bones_cosines_df.head(10))
     # Sort the 'lovely_bones_cosines_df' by the column 'lovely_bones_cosine' column in descending order.
     lovely_bones_cosines_df = lovely_bones_cosines_df.sort_values(by=str(int(n)), ascending=False)
 
